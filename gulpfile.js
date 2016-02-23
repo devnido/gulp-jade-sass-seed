@@ -11,7 +11,13 @@ var gulp = require('gulp'),
 
 var env = process.env.NODE_ENV || 'development';//SET NODE_ENV=PRODUCTION enter
 
-var outputDir  = 'builds/development';
+var outputDir  = '';
+
+if(env == 'development'){
+    outputDir = 'builds/development';
+}else{
+    outputDir = 'builds/production';
+}
 
 gulp.task('jade', function(){
     return gulp.src('src/templates/**/*.jade')
