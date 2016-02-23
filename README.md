@@ -19,7 +19,6 @@ Archivo Gulp Para Páginas Web
 | vinyl-source-stream | 1.1.0   |
 
 ## instalación
-´´´
+```
 npm install
-
-´´´
+```
