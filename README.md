@@ -18,7 +18,7 @@ Archivo Gulp Para Páginas Web
 | [Vinyl Source Stream](https://www.npmjs.com/package/vinyl-source-stream) | 1.1.0   |
 | [Browserify](https://www.npmjs.com/package/browserify)                   | 12.0.1  |
 
-## instalación
+## Instalación
 ```
 npm install
 ```
