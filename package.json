@@ -1,7 +1,8 @@
 {
-  "name": "gulpfile",
+  "name": "gulp-jade-sass-seed",
   "version": "1.0.0",
   "description": "Archivo Plantilla Gulp Para Páginas web",
+  "repository": "https://github.com/devnido/gulp-jade-sass-seed.git",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

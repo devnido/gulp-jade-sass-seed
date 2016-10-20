@@ -1,7 +1,7 @@
-# gulpfile :v:
+# gulp-jade-sass-seed :v:
 
 ## Descripción
-Archivo Gulp Para Páginas Web
+Projecto base para templates paginas web (jade, sass, js)
 
 ## Dependencias
 ### Lista de dependencias
@@ -18,7 +18,22 @@ Archivo Gulp Para Páginas Web
 | [Vinyl Source Stream](https://www.npmjs.com/package/vinyl-source-stream) | 1.1.0   |
 | [Browserify](https://www.npmjs.com/package/browserify)                   | 12.0.1  |
 
-## Instalar
+## Clonar repositorio
+```
+git clone https://github.com/devnido/gulp-jade-sass-seed.git
+```
+
+##Entrar en la carpeta del proyecto
+```
+cd gulp-jade-sass-seed
+```
+
+## Instalar dependencias globales
+```
+npm install -g gulp
+```
+
+## Instalar dependencias locales
 ```
 npm install
 ```
@@ -40,7 +55,8 @@ gulp.task('jade', function(){
 });
 ```
 
-###js
+###javascript
+concatena los archivos js y minifica utilizando Browserify
 ```javascript
 gulp.task('js',function(){
     return browserify('src/js/main',{ debug: env === 'development' })
@@ -53,6 +69,7 @@ gulp.task('js',function(){
 ```
 
 ###sass
+Compila, concatena y minifica sass a css
 ```javascript
 gulp.task('sass',function(){
     var config = {};
@@ -74,6 +91,7 @@ gulp.task('sass',function(){
 ```
 
 ###watch
+Observa cambios en los archivos
 ```javascript
 gulp.task('watch',function() {
     gulp.watch('src/templates/**/*.jade',['jade']);
@@ -83,6 +101,7 @@ gulp.task('watch',function() {
 ```
 
 ###connect
+Livereload en el explorador web para cuando se hagan cambios en los archivos
 ```javascript
 gulp.task('connect', function() {
   connect.server({
@@ -93,6 +112,7 @@ gulp.task('connect', function() {
 });
 ```
 ###default (gulp)
+Tarea por defecto que ejecuta todas las anteriores, solo es necesario ejecutar gulp
 ```javascript
 gulp.task('default',['js','jade','sass','watch','connect']);
 ```
